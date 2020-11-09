@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        [clock]{
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <p>
+        currentTime1: {{currentTime1()}}
+    </p>
+    <p>
+        currentTime2: {{currentTime2}}
+    </p>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data () {
+            return {
+                info: "hello!zjjacky!"
+            }
+        },
+        methods: {
+            currentTime1: function () {
+                return Date.now();//返回一个时间戳
+            }
+        },
+        // 放在computed里面currentTime2，按照属性的方式去调用
+        // 该属性被缓存，不被修改就不会改变
+        computed: {
+            currentTime2: function () {
+                return Date.now();
+            }
+        }
+    })
+</script>
+</body>
+</html>
