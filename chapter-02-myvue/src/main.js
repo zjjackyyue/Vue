@@ -4,6 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router' //自动扫描路由里面的配置
 
+import elementui from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css';
+
+Vue.use(elementui);
+
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Content from '../components/Content'
+import Login from '../views/Login'
 import Main from '../components/Main'
 
 // 显式声明你要用vue-router
@@ -11,10 +11,10 @@ export default new VueRouter({
   routes: [
     {
       // 路由路径 @RequestMapping
-      path: '/content',
-      name: 'content',
+      path: '/login',
+      name: 'login',
       //跳转的组件
-      component: Content
+      component: Login
     },
     {
       // 路由路径
